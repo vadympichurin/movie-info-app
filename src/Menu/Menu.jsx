@@ -54,7 +54,12 @@ const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingS
                         <NavLink className="item--title" to='/wishlist'>
                             Wish list
                         </NavLink>
-                        <span className="menu--item__quantity">{stateWishlist.length === 0 ? (JSON.parse(localStorage.getItem('wishList'))).length : stateWishlist.length}</span>
+                        <span className="menu--item__quantity">{
+                            localStorage.getItem('wishList') === null ? '0' : JSON.parse(localStorage.getItem('wishList')).length
+
+                            // stateWishlist.length === 0 ? (JSON.parse(localStorage.getItem('wishList'))).length : stateWishlist.length
+                            
+                        }</span>
                     </li>
                     <li className="menu--list__item">
                         <i className="far fa-comments item--icon"></i>
