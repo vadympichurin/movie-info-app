@@ -42,7 +42,12 @@ const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingS
                         <NavLink className="item--title" to='/favorites'>
                             Favorites movies
                         </NavLink>
-                        <span className="menu--item__quantity">{stateFavorite.length === 0 ? (JSON.parse(localStorage.getItem('favorite'))).length : stateFavorite.length}</span>
+                        <span className="menu--item__quantity">{
+                            localStorage.getItem('favorite') === null ? '0' : JSON.parse(localStorage.getItem('favorite')).length
+
+                            // stateFavorite.length === 0 ? (JSON.parse(localStorage.getItem('favorite'))).length : stateFavorite.length
+
+                        }</span>
                     </li>
                     <li className="menu--list__item">
                         <i className="far fa-grin-tongue item--icon"></i>
