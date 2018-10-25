@@ -1,0 +1,420 @@
+
+.film--card {
+    /*position: relative;*/
+    /*overflow-y: scroll;*/
+    /*height: calc(100vh - 60px);*/
+}
+
+.film--card__container {
+    /*position: relative;*/
+}
+
+.loader {
+    width: 40%;
+    margin: auto;
+}
+
+.trailer-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.similar-film {}
+
+.film--poster__box {
+    /*background-image: url("https://www.comicbookmovie.com/images/articles/banners/163863.jpg");*/
+    display: none;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*width: 100%;*/
+    /*height: 40vh;*/
+    /*position: relative;*/
+}
+
+.film--short__info {
+    width: 100%;
+    /*position: absolute;*/
+    /*bottom: -5%;*/
+    /*left: 10%;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+}
+
+.film--small__box {
+    width: 100%;
+    /*box-shadow: 3px 3px 3px 0 rgba(153, 137, 153, 1);*/
+}
+
+.film--small__poster {
+    display: block;
+    width: 100%;
+}
+
+
+
+.film--shotInfo__box {
+    width: 45%;
+    padding: 0 1rem;
+
+    /*color: #009688;*/
+}
+
+.film--year {
+    font-size: 1rem;
+}
+
+.film--title {
+    font-size: 2rem;
+    /*color: #455A64;*/
+}
+
+/*.film--budget {*/
+    /*font-size: 1rem;*/
+/*}*/
+
+.film--genre {}
+
+.film--genre__title {
+    padding-right: 5px;
+    font-weight: 700;
+    /*color: #455A64;*/
+}
+
+
+
+.film--info {
+    margin-top: 3%;
+    padding: 0 1rem;
+}
+
+.film--homepage {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-weight: 800;
+}
+
+.homepage-span {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-weight: 400;
+}
+
+
+
+.film--resume {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.film--resume__info {
+}
+
+.film--director__title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.film--director {
+}
+
+.film--actors__title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.film--actors {
+}
+
+.film--trailer {
+    /*background-color: red;*/
+    width: 100%;
+    height: 300px;
+    margin-bottom: 25px;
+}
+
+/*.related--films {*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*background-color: green;*/
+    /*margin-bottom: 10px;*/
+    /*text-align: center;*/
+/*}*/
+
+.slick-prev{
+    /* background-color: #FF5722; */
+    position: absolute;
+    left: 10px;
+    z-index: 3;
+}
+
+.slick-next{
+    /* background-color: #FF5722; */
+    position: absolute;
+    right: 10px;
+}
+
+.slick-prev::before {
+    content: "<";
+    font-size: 40px;
+    font-weight: 800;
+    opacity: 1;
+    color: #FF5722;
+}
+
+.slick-next::before {
+    content: ">";
+    font-size: 40px;
+    font-weight: 800;
+    opacity: 1;
+    color: #FF5722;
+}
+
+
+
+
+/*============================================================*/
+
+@media only screen and (min-width: 768px) {
+    .film--card {
+        overflow-y: scroll;
+        height: calc(100vh - 60px);
+        position: relative;
+    }
+
+    .film--poster__box {
+        /*background-image: url("https://www.comicbookmovie.com/images/articles/banners/163863.jpg");*/
+        /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));*/
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40vh;
+        /*position: relative;*/
+    }
+
+    .film--short__info {
+        width: 90%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        display: flex;
+        /*justify-content: space-between;*/
+    }
+
+    .film--small__box {
+        width: 35%;
+        height: fit-content;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 0 rgba(153, 137, 153, 1);
+    }
+
+    .film--small__poster {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+
+    }
+
+    .film--shotInfo__box {
+        width: 65%;
+        color: #03A9F4;
+    }
+
+    .film--year {
+        font-size: 0.75rem;
+    }
+
+    .film--title {
+        font-size: 1rem;
+    }
+
+    .film-tagline {
+        font-weight: 700;
+        font-size: 0.75rem;
+    }
+
+    .film-tagline-span {
+        font-weight: 400;
+        font-size: 0.75rem;
+    }
+
+    .film--genre {
+        font-weight: 700;
+        font-size: 0.75rem;
+    }
+
+    .film--genre__title {
+        padding-right: 5px;
+        font-weight: 400;
+        font-size: 0.75rem;
+    }
+
+    .film--vote-span {
+        padding: 3px 6px;
+        background-color: #ffd564;
+        border-radius: 5px;
+        font-size: 0.75rem;
+    }
+
+    .film--vote {
+        font-size: 0.75rem;
+    }
+
+    .film--info {
+        margin-top: 10%;
+    }
+
+    .film--resume {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .film--resume__info {}
+
+    .film--director__title {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .film--director {}
+
+    .film--actors__title {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .film--actors {}
+
+    .film--trailer {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .trailer-not-found {
+        height: 100%;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+/*============================================================*/
+@media only screen and (min-width: 1200px) {
+    .film--card {
+        overflow-y: scroll;
+        height: calc(100vh - 60px);
+        position: relative;
+    }
+
+    .film--poster__box {
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40vh;
+    }
+
+    .film--short__info {
+        width: 90%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        display: flex;
+    }
+
+    .film--small__box {
+        width: 20%;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 0 rgba(153, 137, 153, 1);
+        height: fit-content;
+    }
+
+    .film--small__poster {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+
+    }
+
+    .film--shotInfo__box {
+        width: 80%;
+        color: #03A9F4;
+    }
+
+    .film--year {
+        font-size: 1rem;
+    }
+
+    .film--title {
+        font-size: 1.5rem;
+    }
+
+    .film-tagline {
+        font-weight: 700;
+    }
+
+    .film-tagline-span {
+        font-weight: 400;
+    }
+
+    .film--genre {
+        font-weight: 700;
+    }
+
+    .film--genre__title {
+        padding-right: 5px;
+        font-weight: 400;
+    }
+
+    .film--vote-span {
+        padding: 5px 10px;
+        background-color: #ffd564;
+        border-radius: 5px;
+    }
+
+    .film--vote {
+        font-size: 0.75rem;
+    }
+
+    .film--info {
+        margin-top: 3%
+    }
+
+    .film--resume {
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 32%
+    }
+
+    .film--homepage {
+        margin-left: 32%;
+    }
+
+    .film--resume__info {
+        margin-left: 32%
+    }
+
+    .film--director__title {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .film--director {}
+
+    .film--actors__title {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .film--actors {}
+
+    .film--trailer {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .trailer-not-found {
+        height: 100%;
+        margin: auto;
+    }
+}

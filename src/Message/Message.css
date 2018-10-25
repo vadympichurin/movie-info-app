@@ -1,0 +1,85 @@
+.user--message__card {
+    margin-bottom: 15px;
+}
+
+.user--photo__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /*vertical-align: middle;*/
+    /*line-height: 56px;*/
+}
+
+.user--photo__img {
+    border: 2px solid #3b5998;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.user--name {
+    font-weight: 700;
+}
+
+.user--message {
+    padding: 15px 15px;
+    background-color: #3b5998;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+
+
+/*==================================================================*/
+@media only screen and (min-width: 768px) {
+    .user--message {
+        /*padding: 15px 15px;*/
+        /*background-color: #3b5998;*/
+        /*border-radius: 10px;*/
+        /*color: #ffffff;*/
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*=====================================================*/
+/*@media only screen and (min-width: 1200px) {*/
+    /*.user--message__card {*/
+        /*margin-bottom: 15px;*/
+    /*}*/
+
+    /*.user--photo__box {*/
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*margin-bottom: 10px;*/
+        /*!*vertical-align: middle;*!*/
+        /*!*line-height: 56px;*!*/
+    /*}*/
+
+    /*.user--photo__img {*/
+        /*border: 2px solid #3b5998;*/
+        /*border-radius: 50%;*/
+        /*width: 50px;*/
+        /*height: 50px;*/
+        /*margin-right: 10px;*/
+    /*}*/
+
+    /*.user--name {*/
+        /*font-weight: 700;*/
+    /*}*/
+
+    /*.user--message {*/
+        /*padding: 15px 15px;*/
+        /*background-color: #3b5998;*/
+        /*border-radius: 10px;*/
+        /*color: #ffffff;*/
+    /*}*/
+/*}*/

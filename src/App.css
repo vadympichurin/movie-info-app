@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.root {
+  position: relative;
+  display: flex;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-track {  background-color: var(--red);}
+::-webkit-scrollbar-track-piece { background-color: #666;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #76c7a9; border-radius: 5px;}
+::-webkit-scrollbar-corner { background-color: #666;}
+::-webkit-resizer { background-color: var(--red);}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #f5f6f7;
+  }
+}
