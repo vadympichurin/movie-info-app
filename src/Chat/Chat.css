@@ -23,9 +23,6 @@
     width: 100%;
     background: #c7cff6;
     height: 100%;
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
-
 }
 
 .current--user {
@@ -43,14 +40,12 @@
 }
 
 .text--form {
-    /*margin: auto;*/
     text-align: center;
 }
 
 .textArea--chat {
     width: 90%;
     height: 60px;
-    /*border-radius: 15px;*/
 }
 
 .text--submit {
@@ -79,51 +74,25 @@
 /*================================================================*/
 
 @media only screen and (min-width: 768px) {
-    .chat--show {
-        /*position: absolute;*/
-        /*right: 0;*/
-        /*transition: 2s;*/
-        /*z-index: 1;*/
-        /*width: 100%;*/
-        /*background: #c7cff6;*/
-        /*height: 100%;*/
-    }
 
     .chat--hidden {
         position: static;
-        /*right: -800px;*/
         transition: 0s;
-        /*z-index: 1;*/
         width: 25%;
-        /*background: #c7cff6;*/
-        /*height: 100%;*/
     }
 
 
     .chat--box {
-        /*width: 100%;*/
-        /*background: #c7cff6;*/
         height: 100vh;
-        /*padding-left: 10px;*/
-        /*padding-right: 10px;*/
-
     }
 
     .current--user {
         position: static;
-        /*width: 100%;*/
-        /*height: 60px;*/
-        /*background: #b4b1b2;*/
     }
 
     .close--chat {
         display: none;
-        /*color: #ffffff;*/
     }
-
-    /*.close--chat:hover {*/
-        /*color: #f80a0a;*/
-    /*}*/
 
     .chat--title {
         text-align: center;
@@ -145,28 +114,8 @@
 /*======================================================*/
 
 @media only screen and (min-width: 1200px) {
-    /*.chat--box {*/
-        /*width: 20%;*/
-        /*padding-left: 10px;*/
-        /*padding-right: 10px;*/
-        /*!*margin: auto;*!*/
-    /*}*/
-
-    /*.message--box {*/
-        /*overflow-y: scroll;*/
-        /*height: calc(100vh - 60px);*/
-
-    /*}*/
-
 
     .chat--hidden {
-        /*position: static;*/
-        /*right: -800px;*/
-        /*transition: 0s;*/
-        /*z-index: 1;*/
         width: 20%;
-        /*background: #c7cff6;*/
-        /*height: auto;*/
     }
-
 }

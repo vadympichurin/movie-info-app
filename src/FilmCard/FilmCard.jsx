@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import SimilarFilm from '../SimilarFilm/SimilarFilm';
-import axios from 'axios';
 import Loader from 'react-loader-spinner';
 import Slider from "react-slick";
 import './FilmCard.css';
@@ -13,9 +12,6 @@ import { inputClear } from "../redux/actions/inputAction";
 
 class FilmCard extends Component {
     static defaultProps = {};
-
-    static propTypes = {};
-
     componentWillReceiveProps (nextProps) {
         if(this.props.match.params.id !== nextProps.match.params.id) {
             this.props.movieInfoAction(nextProps.match.params.id)
@@ -54,7 +50,6 @@ class FilmCard extends Component {
             ]
         };
 
-        console.log(this.props);
         return (
             <div className='film--card__container'>
                 {this.props.isLoading ? <div className='loader'><Loader type="Plane" color="#00BFFF"/></div> :
@@ -76,7 +71,7 @@ class FilmCard extends Component {
                                 <p className='film-tagline'>Tagline: <span
                                     className='film-tagline-span'>{this.props.movieInfo.tagline}</span></p>
                                 <p className='film--genre'>Genre: {this.props.movieInfo.genres.map(el => <span
-                                    className='film--genre__title'>{el.name}</span>)}</p>
+                                    className='film--genre__title' key={el.id} >{el.name}</span>)}</p>
 
                                 <p className='film--vote'><span className='film--vote-span'>{this.props.movieInfo.vote_average}</span> <i className="fas fa-star yellow"></i> из {this.props.movieInfo.vote_count} голосов </p>
                             </div>
@@ -100,7 +95,7 @@ class FilmCard extends Component {
 
                             <div className='similar-film'>
                                 <Slider {...settings}>
-                                    {this.props.movieInfo.recommendation.map(el => <SimilarFilm title={el.title} poster={el.poster_path} id={el.id}/>)}
+                                    {this.props.movieInfo.recommendation.map(el => <SimilarFilm title={el.title} key={el.id} poster={el.poster_path} id={el.id}/>)}
                                 </Slider>
                             </div>
                         </div>
@@ -109,7 +104,6 @@ class FilmCard extends Component {
             </div>
         );
     }
-
 }
 
 function mapStateToProps(state) {
@@ -131,6 +125,11 @@ function mapDispatchToProps(dispatch) {
             dispatch(inputClear())
         },
     }
+}
+
+FilmCard.proptypes = {
+    movieInfo: PropTypes.object,
+    isLoading: PropTypes.bool,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilmCard);

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Message.css';
 
-const Message = ({photo, name, message, id}) => {
+const Message = ({photo, name, message}) => {
     return (
         <div className="user--message__card">
             <div className="user--photo__box">
@@ -20,7 +20,6 @@ Message.propTypes = {
     photo: PropTypes.string,
     name: PropTypes.string,
     message: PropTypes.string,
-    // key: PropTypes.number,
 };
 
 export default Message;

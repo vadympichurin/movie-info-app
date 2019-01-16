@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-
 import { showMenuAction } from '../redux/actions/showMenuAction';
 import { connect } from 'react-redux';
 import { playNowLength } from "../redux/selectors/menuSelectors";
-
-
 import './Menu.css';
 
-// showMenuHendler
-// slideMenu
-
-const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingSoon, stateFavorite, stateWishlist, playNowLength}) => {
+const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingSoon,
+       playNowLength}) => {
     return (
         <div className={`"left--bar" ${showMenu ? 'show--menu' : 'hidden--menu'}`}>
             <div className="logo-box">
@@ -44,9 +39,6 @@ const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingS
                         </NavLink>
                         <span className="menu--item__quantity">{
                             localStorage.getItem('favorite') === null ? '0' : JSON.parse(localStorage.getItem('favorite')).length
-
-                            // stateFavorite.length === 0 ? (JSON.parse(localStorage.getItem('favorite'))).length : stateFavorite.length
-
                         }</span>
                     </li>
                     <li className="menu--list__item">
@@ -55,10 +47,7 @@ const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingS
                             Wish list
                         </NavLink>
                         <span className="menu--item__quantity">{
-                            localStorage.getItem('wishList') === null ? '0' : JSON.parse(localStorage.getItem('wishList')).length
-
-                            // stateWishlist.length === 0 ? (JSON.parse(localStorage.getItem('wishList'))).length : stateWishlist.length
-                            
+                            localStorage.getItem('wishList') === null ? '0' : JSON.parse(localStorage.getItem('wishList')).length                            
                         }</span>
                     </li>
                     <li className="menu--list__item">
@@ -76,7 +65,7 @@ const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingS
                 <div className='most-movie-box'>
 
                 {bestChoice.map(el =>
-                <div className='most-movies-card'>
+                <div className='most-movies-card' key={el.id} >
                     <img className='most-movies-poster' src={`https://image.tmdb.org/t/p/w300${el.poster_path}`} alt="movie poster"/>
                     <div className='most-movie-info'>
                         <NavLink to={`/film_info/${el.id}`}>
@@ -89,10 +78,6 @@ const Menu = ({showMenu, showMenuAction, bestChoice, statePlayNow, stateCommingS
                 </div>
 
             </div>
-
-
-
-
         </div>
     )
 };
@@ -117,12 +102,14 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-
 Menu.propTypes = {
-    slideMenu: PropTypes.bool,
-    showMenuHendler: PropTypes.func,
+    showMenu: PropTypes.bool,
+    bestChoice: PropTypes.array,
+    statePlayNow: PropTypes.array,
+    stateCommingSoon: PropTypes.array,
+    stateFavorite: PropTypes.array,
+    stateWishlist: PropTypes.array,
+    playNowLength: PropTypes.number,
 };
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);
-

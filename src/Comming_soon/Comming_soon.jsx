@@ -1,32 +1,19 @@
 import React, {Component} from 'react';
-// import axios from 'axios';
 import Grid from '../Grid/Grid';
+import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { commingSoonAsync } from '../redux/actions/commingSoonAction';
 import { favoriteAsync } from '../redux/actions/favoriteAction';
 import { wishlistAsync } from "../redux/actions/wishlistAction";
 
-
 import './Comming_soon.css';
 
 class Comming_soon extends Component {
-    // state = {
-    //     result: [],
-    // };
-
+    
     componentDidMount() {
-
-        // axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=170b9b9397b0574b7d603cba918ea1f4&language=ru-RUS&page=1&region=UA\n")
-        //     .then(info => info.data.results)
-        //     .then(data => this.setState({
-        //         result: data,
-        //     }))
-
-        {this.props.commingSoonAction()}
-
+        this.props.commingSoonAction();
     }
-
 
     render() {
         return (
@@ -35,7 +22,6 @@ class Comming_soon extends Component {
             </div>
         )
     }
-
 }
 
 function mapStateToProps(state) {
@@ -56,6 +42,10 @@ function mapDispatchToProps(dispatch) {
             dispatch(wishlistAsync(event))
         },
     }
+}
+
+Comming_soon.propTypes = {
+    stateCommingSoon: PropTypes.array,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Comming_soon);

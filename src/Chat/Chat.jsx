@@ -7,10 +7,8 @@ import './Chat.css';
 import { showChatAction } from '../redux/actions/showChatAction';
 import { connect } from 'react-redux';
 
-
 class Chat extends Component {
     static propTypes = {
-        showChatHendler: PropTypes.func,
         showChat: PropTypes.bool,
     };
 
@@ -61,7 +59,6 @@ class Chat extends Component {
                     {this.state.messages.map(el => <Message photo={el.userPhoto} name={el.userName} message={el.userMessage} key={el.id}/>)}
                 </div>
 
-
             </div>
         )
     }
@@ -80,10 +77,5 @@ function mapDispatchToProps(dispatch) {
         }
     }
 }
-
-// Chat.propTypes = {
-//     showChatHendler: PropTypes.func,
-//     showChat: PropTypes.bool,
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chat);
