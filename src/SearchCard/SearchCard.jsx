@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const SearchCard = ({id, title, poster}) => {
     return (
@@ -11,5 +12,11 @@ const SearchCard = ({id, title, poster}) => {
         </div>
     )
 };
+
+SearchCard.propTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+}
 
 export default SearchCard;

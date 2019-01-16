@@ -1,36 +1,14 @@
 import React, {Component} from 'react';
 import Grid from '../Grid/Grid';
 import PropTypes from 'prop-types';
-
 import { wishlistDidMount, delWishlist } from '../redux/actions/wishlistAction';
 import { connect } from 'react-redux';
 
 class WishList extends Component {
     static defaultProps = {};
-
-    static propTypes = {};
-
-    // state = {
-    //     result: [],
-    // };
-
     componentDidMount() {
-        // let info = JSON.parse(localStorage.getItem('wishList'));
-        // this.setState({
-        //     result: info,
-        // });
-
-        {this.props.wishlistDidMount()}
-
-
+        this.props.wishlistDidMount();
     }
-
-    // deleteWish = (event) => {
-    //     this.props.delFromWish(event);
-    //     this.setState({
-    //         result: JSON.parse(localStorage.getItem('wishList'))
-    //     })
-// };
 
     render() {
         return (
@@ -58,6 +36,8 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-
+WishList.propTypes = {
+    stateWishlist: PropTypes.array,
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(WishList);

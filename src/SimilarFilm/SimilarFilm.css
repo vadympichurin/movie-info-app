@@ -1,8 +1,5 @@
 
 .related--films {
-    /*height: 200px;*/
-    /*width: 300px;*/
-    /*background-color: green;*/
     margin-bottom: 10px;
     text-align: center;
 }
@@ -13,13 +10,8 @@
     max-width: 100%;
     height: auto;
     margin: auto;
-    /*height: 200px;*/
-
 }
 
-/*.similar--film__title {*/
-    /*font-size: 1rem;*/
-/*}*/
 
 @media only screen and (min-width: 768px) {}
 

@@ -38,8 +38,6 @@ const Main = ({showMenuAction, showChatAction, addTo, addToWish, delFromFavorite
 
             <SearchList/>
 
-
-
             <ConnectedRouter history={history}>
                 <Switch>
                     <Route exact path='/' render={props => <Play_now addToWish={addToWish}/>}/>
@@ -51,7 +49,6 @@ const Main = ({showMenuAction, showChatAction, addTo, addToWish, delFromFavorite
             </ConnectedRouter>
         </main>
     );
-
 };
 
 function mapStateToProps(state) {
@@ -80,10 +77,12 @@ function mapDispatchToProps(dispatch) {
 }
 
 Main.propTypes = {
-    showMenuHendler: PropTypes.func,
-    showChatHendler: PropTypes.func,
     addTo: PropTypes.func,
+    delFromWish: PropTypes.func,
     addToWish: PropTypes.func,
+    showMenu: PropTypes.bool,
+    showChat: PropTypes.bool,
+    stateInput: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

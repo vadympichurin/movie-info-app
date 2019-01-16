@@ -16,5 +16,10 @@ const SimilarFilm = ({title, poster, id}) => {
     );
 };
 
+SimilarFilm.propTypes = {
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    id: PropTypes.number,
+}
 
 export default SimilarFilm;
